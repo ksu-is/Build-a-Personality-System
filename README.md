@@ -8,7 +8,7 @@ The original datafile was called data-final.csv. I ran the following code to cre
 * `df = pd.read_csv('data-final.csv', delimiter="\t") `
 * `df.head(38000).to_csv('data-final-modified.csv', Index=False)`
 
-Results of text are displayed on graphs. These graphs will be displayed on a webserver.
+The program groups the results into 10 personality types using K-Means clustering. The program generates 10 graphs, 1 for each personality. Screenshots of the graphs are placed in the static folder and dispalyed on a webpage using HTML and Flask.
 
 ## The original data file with 1,000,000 responses
 If you want to download the original data file and run the program using 1,000,000 responses. 
@@ -80,7 +80,7 @@ The scale was labeled 1=Disagree, 3=Neutral, 5=Agree
 
 The time spent on each question is also recorded in milliseconds. These are the variables ending in _E. This was calculated by taking the time when the button for the question was clicked minus the time of the most recent other button click.
 
-# some metadata collected from the questionaire
+# Some metadata collected from the questionaire
 - dateload    The timestamp when the survey was started.
 - screenw     The width the of user's screen in pixels
 - screenh     The height of the user's screen in pixels
